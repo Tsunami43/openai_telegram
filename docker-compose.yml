@@ -1,0 +1,13 @@
+services:
+  bot:
+    build: .
+    depends_on:
+      - redis
+    restart: always
+    volumes:
+        - /logs:/app/logs
+  redis:
+    image: redis:latest
+    ports:
+      - "${redis_port}:${redis_port}"
+    restart: always
