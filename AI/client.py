@@ -7,7 +7,7 @@ class OpenAIClient:
     def __init__(self):
         self.client = AsyncOpenAI(
             # This is the default and can be omitted
-            api_key=Config.REDIS_URL,
+            api_key=Config.OPEN_AI_TOKEN,
             timeout=30,
         )
 
